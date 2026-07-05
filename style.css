@@ -1,0 +1,183 @@
+.{
+  margin:0;
+}
+h1{
+  font-family:Playfair Display ;
+  font-size: 50px;
+  color: white;
+  animation: fadein 2s ease ;
+    line-height: 1.2;
+    text-shadow: 0 0 10px rgba(217,140,255,0.5);
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h2{
+  color: purple;
+  font-family: Fantasy;
+  font-size: 30px;
+}
+p{
+  color: #d9d9d9;
+  font-size: 18px;
+  font-family: Fantasy;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+nav{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space between;
+  gap: 60px;
+  align-items: center;
+  padding: 0;
+  flex-direction: row;
+  margin: 0px;
+  background-color:#8A2bEc;
+ color: white;
+ text-decoration: none;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ box-shadow: 0 4px 7px;
+ transition: 0.3s ease;
+}
+nav a:hover{
+  color: deeppink;
+}
+
+.logo {
+    color: White;
+    transition: 0.3s;
+    font-size: 30px;
+    font-family: Fantasy;
+    font-weight: 700; 
+}
+
+.logo:hover {
+    color: #8A2bEc;
+}
+.image{
+  width:400px;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: #01082D;
+}
+.image img{
+  width: 100%;
+  object-fit:cover ;
+  transition: transform 0.4s ease;,box-shadow: 0.4s ease;
+  cursor: pointer;
+}
+.image img:hover{
+  transform:scale(1.1);
+  box-shadow: 0 15px 35px rgba(168,85,274,0.4);
+  background-color: #01082D;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  
+}
+button{
+  background-color:#FF4F8B;
+  color: white;
+  padding:20px ;
+  margin: 0px;
+  transition-duration:3s ;
+  border-radius:50px ;
+  animation:blink 2s infinite ;
+  border-color: deeppink;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  display: inline-block;
+  transition: 5s;
+  font-weight: bold;
+}
+button:hover{
+  transform:rotate;
+}
+
+button:active{
+ color: purple;
+ transform:rotate;
+ text-align: center;
+ box-shadow:0 15px 25px;
+}
+@keyframes blink{
+  0%{
+    background-color: pink;
+  }
+  50%{
+    background-color: purple;
+  }
+  100%{
+    background-color: #108;
+  }
+}
+@media (max-width:480px) {
+  .container{
+    flex-direction: column;
+  }
+  .image{
+    width:400px;
+    flex: 1;
+    order:2;
+  }
+  h1{
+    font-size: 50px;
+    flex: 1;
+  order: 1;
+  }
+  p{
+    font-size: 20px;
+    order: 3;
+    width: auto;
+    
+  }
+}
+.scroll-text {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color:pink;
+  padding: 10px 0;
+  animation: scroll 12s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+nav a:link{
+    color: white;
+    text-decoration: none;
+}
+footer{
+  color: #FFFF;
+}
+.footer :hover{
+  color: deeppink;
+}
+footer:active{
+  color: deeppink;
+}
